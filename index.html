@@ -105,7 +105,7 @@
       font-size: 1.3rem; font-weight: 700;
       color: var(--navy); letter-spacing: -0.04em;
     }
-    .nav-wordmark span { color: var(--orange); }
+    .nav-wordmark span { display: none; }
     .nav-tag {
       font-size: 0.7rem; font-weight: 500;
       color: var(--orange);
@@ -157,24 +157,23 @@
       opacity: 0; animation: rise 0.6s ease 0.3s forwards;
     }
 
-    /* ── BONUS PILLS ── */
-    .bonus-row {
-      display: flex; flex-wrap: wrap; gap: 0.75rem;
-      opacity: 0; animation: rise 0.6s ease 0.25s forwards;
+    /* ── DESC CHECKLIST ── */
+    .desc-checklist {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 0.75rem;
+      opacity: 0; animation: rise 0.6s ease 0.3s forwards;
     }
-    .bonus-pill {
-      display: flex; align-items: center; gap: 10px;
-      background: var(--orange-light);
-      border: 1.5px solid var(--orange-mid);
-      border-radius: 14px; padding: 0.9rem 1.2rem;
-      flex: 1; min-width: 140px;
+    .desc-checklist li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 0.95rem; color: var(--ink-soft); line-height: 1.6;
     }
-    .bonus-pill-icon {
-      font-size: 1.5rem; flex-shrink: 0;
-    }
-    .bonus-pill-label { font-size: 0.72rem; color: var(--ink-soft); }
-    .bonus-pill-amount {
-      font-size: 1.5rem; font-weight: 700; color: var(--orange); line-height: 1;
+    .desc-checklist li::before {
+      content: '✓';
+      display: flex; align-items: center; justify-content: center;
+      min-width: 22px; height: 22px;
+      background: var(--orange); color: white;
+      border-radius: 50%; font-size: 0.65rem; font-weight: 800;
+      margin-top: 2px; flex-shrink: 0;
     }
 
     /* ── CODE CARD ── */
@@ -270,6 +269,8 @@
     .btn-share:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
     .btn-share.wa { border-color: #b7e8c8; background: #f0faf4; color: #1a7a45; }
     .btn-share.tg { border-color: #b3d4ee; background: #f0f7fd; color: #1a6fa0; }
+    .btn-share.x  { border-color: #d0d0d0; background: #fafafa; color: #000; }
+    .btn-share.fb { border-color: #b3c6ee; background: #f0f3fd; color: #1a3fa0; }
 
     /* ── DIVIDER ── */
     .section-divider { max-width: 600px; margin: 0 auto; height: 1px; background: var(--border); }
@@ -386,29 +387,15 @@
 
     <div class="eyebrow">
       <div class="eyebrow-line"></div>
-      <div class="eyebrow-text">Invito esclusivo</div>
+      <div class="eyebrow-text">Conto Corrente Arancio</div>
     </div>
 
-    <h1>Apri il conto<br>e prendi<br><span class="highlight">50€</span> subito.</h1>
+    <h1>Apri il conto e<br>ricevi <span class="highlight">50€</span><br>di cashback!</h1>
 
-    <div class="bonus-row">
-      <div class="bonus-pill">
-        <div class="bonus-pill-icon">🎁</div>
-        <div>
-          <div class="bonus-pill-label">Ricevi tu</div>
-          <div class="bonus-pill-amount">50€</div>
-        </div>
-      </div>
-      <div class="bonus-pill">
-        <div class="bonus-pill-icon">🤝</div>
-        <div>
-          <div class="bonus-pill-label">Ricevo io</div>
-          <div class="bonus-pill-amount">50€</div>
-        </div>
-      </div>
-    </div>
-
-    <p class="desc">Apri il <strong>Conto Corrente Arancio Più</strong> con il mio codice, spendi 100€ con la carta e vi beccate 50€ in due. Nessun costo nascosto.</p>
+    <ul class="desc-checklist">
+      <li>Apri il <strong>Conto Corrente Arancio Più</strong> inserendo il mio codice amico e richiedi la <strong>Carta di Debito Mastercard</strong> entro il <strong>23/05</strong></li>
+      <li>Spendi <strong>100€</strong> con la carta di debito entro il <strong>31/07</strong></li>
+    </ul>
 
     <div class="code-card">
       <div class="card-header">
@@ -438,12 +425,17 @@
 
     <div class="share-row">
       <a class="btn-share wa"
-         href="https://wa.me/?text=Apri%20il%20Conto%20Arancio%20Pi%C3%B9%20ING%20con%20il%20mio%20codice%20AN386A%20e%20prendi%2050%E2%82%AC%20di%20bonus!%20%F0%9F%8E%81%20https%3A%2F%2Fwww.ing.it%2Fper-i-miei-amici.html%3Fcode%3DAN386A"
+         href="https://wa.me/?text=Apri%20il%20Conto%20Arancio%20Pi%C3%B9%20ING%20con%20il%20mio%20codice%20AN386A%20e%20prendi%2050%E2%82%AC%20di%20cashback!%20%F0%9F%8E%81%20https%3A%2F%2Fwww.ing.it%2Fper-i-miei-amici.html%3Fcode%3DAN386A"
          target="_blank">💬 WhatsApp</a>
       <a class="btn-share tg"
-         href="https://t.me/share/url?url=https%3A%2F%2Fwww.ing.it%2Fper-i-miei-amici.html%3Fcode%3DAN386A&text=Apri%20il%20Conto%20Arancio%20Pi%C3%B9%20ING%20con%20il%20codice%20AN386A%20e%20prendi%2050%E2%82%AC!"
+         href="https://t.me/share/url?url=https%3A%2F%2Fwww.ing.it%2Fper-i-miei-amici.html%3Fcode%3DAN386A&text=Apri%20il%20Conto%20Arancio%20Pi%C3%B9%20ING%20con%20il%20codice%20AN386A%20e%20prendi%2050%E2%82%AC%20di%20cashback!"
          target="_blank">✈️ Telegram</a>
-      <button class="btn-share" onclick="copyLink()">🔗 Copia link</button>
+      <a class="btn-share x"
+         href="https://twitter.com/intent/tweet?text=Apri%20il%20Conto%20Arancio%20Pi%C3%B9%20ING%20con%20il%20codice%20AN386A%20e%20ricevi%2050%E2%82%AC%20di%20cashback!%20%F0%9F%8E%81&url=https%3A%2F%2Fwww.ing.it%2Fper-i-miei-amici.html%3Fcode%3DAN386A"
+         target="_blank">𝕏 Twitter/X</a>
+      <a class="btn-share fb"
+         href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ing.it%2Fper-i-miei-amici.html%3Fcode%3DAN386A"
+         target="_blank">👍 Facebook</a>
     </div>
 
   </div>
@@ -462,21 +454,21 @@
       <div class="step-num">01</div>
       <div class="step-body">
         <strong>Clicca il link e apri il Conto Arancio Più</strong>
-        <p>Usa il link o il codice <span class="code-inline">AN386A</span> su <a href="https://www.ing.it/per-i-miei-amici.html?code=AN386A" target="_blank" style="color:var(--orange)">ing.it</a> entro il <strong>23/05/2026</strong>. Richiedi anche la Carta di Debito Mastercard.</p>
+        <p>Usa il link o il codice <span class="code-inline">AN386A</span> su <a href="https://www.ing.it/per-i-miei-amici.html?code=AN386A" target="_blank" style="color:var(--orange)">ing.it</a> entro il <strong>23/05/2026</strong> — richiedi anche la <strong>Carta di Debito Mastercard</strong></p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">02</div>
       <div class="step-body">
         <strong>Spendi 100€ con la carta</strong>
-        <p>Usa la tua Carta di Debito Mastercard per acquisti online o in negozio per almeno <strong>100€</strong> entro il <strong>31/07/2026</strong>. Anche in più transazioni.</p>
+        <p>Usa la tua Carta di Debito Mastercard per acquisti online o in negozio per almeno <strong>100€</strong> entro il <strong>31/07/2026</strong> — anche in più transazioni</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">03</div>
       <div class="step-body">
         <strong>Ricevi 50€ sul conto</strong>
-        <p>ING accredita il bonus direttamente sul tuo Conto Arancio Più entro il <strong>30/09/2026</strong>. Automatico, nessuna richiesta da fare.</p>
+        <p>ING accredita il bonus direttamente sul tuo Conto Arancio Più entro il <strong>30/09/2026</strong> — automatico, nessuna richiesta da fare</p>
       </div>
     </div>
   </div>
@@ -582,11 +574,6 @@
       toast('Codice AN386A copiato ✓');
       setTimeout(() => { btn.textContent = 'Copia codice'; btn.classList.remove('ok'); }, 2500);
     });
-  }
-
-  function copyLink() {
-    navigator.clipboard.writeText('https://www.ing.it/per-i-miei-amici.html?code=AN386A')
-      .then(() => toast('Link copiato ✓'));
   }
 </script>
 
