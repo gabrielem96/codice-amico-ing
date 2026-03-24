@@ -163,6 +163,12 @@
       display: flex; flex-direction: column; gap: 0.75rem;
       opacity: 0; animation: rise 0.6s ease 0.3s forwards;
     }
+    .desc-checklist-label {
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--ink-soft); margin-bottom: 0.25rem;
+      opacity: 0; animation: rise 0.6s ease 0.28s forwards;
+    }
     .desc-checklist li {
       display: flex; align-items: flex-start; gap: 10px;
       font-size: 0.95rem; color: var(--ink-soft); line-height: 1.6;
@@ -171,7 +177,9 @@
       content: '✓';
       display: flex; align-items: center; justify-content: center;
       min-width: 22px; height: 22px;
-      background: var(--orange); color: white;
+      background: transparent;
+      color: var(--orange);
+      border: 2px solid var(--orange);
       border-radius: 50%; font-size: 0.65rem; font-weight: 800;
       margin-top: 2px; flex-shrink: 0;
     }
@@ -392,9 +400,10 @@
 
     <h1>Apri il conto e<br>ricevi <span class="highlight">50€</span><br>di cashback!</h1>
 
+    <p class="desc-checklist-label">Cosa devi fare</p>
     <ul class="desc-checklist">
-      <li>Apri il <strong>Conto Corrente Arancio Più</strong> inserendo il mio codice amico e richiedi la <strong>Carta di Debito Mastercard</strong> entro il <strong>23/05</strong></li>
-      <li>Spendi <strong>100€</strong> con la carta di debito entro il <strong>31/07</strong></li>
+      <li>Aprire il <strong>Conto Corrente Arancio Più</strong> inserendo il mio codice amico <span class="code-inline">AN386A</span> e richiedere la <strong>Carta di Debito Mastercard</strong> entro il <strong>23/05</strong></li>
+      <li>Spendere <strong>100€</strong> con la carta di debito entro il <strong>31/07</strong></li>
     </ul>
 
     <div class="code-card">
