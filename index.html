@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Codice Amico ING AN386A — 50€ a te + 50€ a me</title>
-  <meta name="description" content="Usa il codice amico ING AN386A e ottieni 50€ di bonus. Apri il Conto Corrente Arancio Più, richiedi la Carta di Debito Mastercard e spendi 100€ entro il 31/07/2026.">
-  <meta name="keywords" content="codice amico ING, codice referral ING, ING AN386A, invito ING, aprire conto ING, bonus ING 50 euro, conto arancio più, ING codice invito">
+  <title>Codice Amico ING AN386A — 50€ cashback + 4% su Conto Arancio</title>
+  <meta name="description" content="Usa il codice amico ING AN386A: ottieni 50€ di cashback aprendo il Conto Corrente Arancio Più. In più, 4% lordo per 12 mesi su Conto Arancio fino a 100.000€ se accrediti stipendio o 1.000€/mese.">
+  <meta name="keywords" content="codice amico ING, codice referral ING, ING AN386A, invito ING, aprire conto ING, bonus ING 50 euro, conto arancio più, ING 4 percento, conto arancio 4%, ING codice invito">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Codice Amico ING">
   <link rel="canonical" href="https://gabrielem96.github.io/codice-amico-ing/">
@@ -78,6 +78,8 @@
       --border: #e8e8e8;
       --green: #00995a;
       --green-light: #e6f7f0;
+      --violet: #7B22FA;
+      --violet-light: #f3eaff;
     }
 
     html { scroll-behavior: smooth; }
@@ -151,7 +153,14 @@
       background: var(--orange); border-radius: 2px; opacity: 0.25;
     }
 
-    .desc {
+    h1 .highlight2 {
+      color: var(--violet); position: relative; display: inline-block;
+    }
+    h1 .highlight2::after {
+      content: ''; position: absolute;
+      left: 0; bottom: 3px; right: 0; height: 3px;
+      background: var(--violet); border-radius: 2px; opacity: 0.25;
+    }
       font-size: 0.95rem; color: var(--ink-soft);
       line-height: 1.75; font-weight: 400;
       opacity: 0; animation: rise 0.6s ease 0.3s forwards;
@@ -179,8 +188,8 @@
       min-width: 22px; height: 22px;
       background: transparent;
       color: var(--orange);
-      border: 2px solid var(--orange);
-      border-radius: 50%; font-size: 0.65rem; font-weight: 800;
+      border: none;
+      border-radius: 0; font-size: 1rem; font-weight: 800;
       margin-top: 2px; flex-shrink: 0;
     }
 
@@ -350,7 +359,57 @@
     }
 
     /* ── FAQ ── */
-    /* ── FOOTER ── */
+    /* ── PROMO CARD 4% ── */
+    .promo-card {
+      background: var(--violet);
+      border-radius: 20px;
+      padding: 2rem;
+      display: flex; flex-direction: column; gap: 1.1rem;
+      color: white;
+      position: relative; overflow: hidden;
+    }
+    .promo-card::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: white; opacity: 0.06;
+      border-radius: 50%;
+    }
+    .promo-card-top {
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .promo-rate {
+      font-size: 4rem; font-weight: 800; line-height: 1;
+      color: white; letter-spacing: -0.04em;
+      flex-shrink: 0;
+    }
+    .promo-rate span { font-size: 2.5rem; }
+    .promo-rate-title {
+      font-size: 1rem; font-weight: 700; color: white;
+    }
+    .promo-rate-sub {
+      font-size: 0.8rem; color: rgba(255,255,255,0.7); margin-top: 2px;
+    }
+    .promo-headline {
+      font-size: 1.05rem; font-weight: 600; color: white;
+    }
+    .promo-list {
+      list-style: none; display: flex; flex-direction: column; gap: 0.6rem;
+    }
+    .promo-list li {
+      display: flex; align-items: flex-start; gap: 9px;
+      font-size: 0.88rem; color: rgba(255,255,255,0.9); line-height: 1.55;
+    }
+    .promo-list li::before {
+      content: '✓';
+      color: white; font-weight: 800; font-size: 0.9rem;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .promo-note {
+      font-size: 0.72rem; color: rgba(255,255,255,0.5);
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 0.75rem; line-height: 1.5;
+    }
     footer {
       background: var(--navy); color: rgba(255,255,255,0.5);
       text-align: center; padding: 2rem 1.25rem; font-size: 0.75rem;
@@ -398,12 +457,12 @@
       <div class="eyebrow-text">Conto Corrente Arancio</div>
     </div>
 
-    <h1>Apri il conto e<br>ricevi <span class="highlight">50€</span><br>di cashback!</h1>
+    <h1>Apri il conto e<br>ricevi <span class="highlight">50€</span> di cashback<br><span class="highlight2">+4%</span> per 12 mesi</h1>
 
     <p class="desc-checklist-label">Cosa devi fare</p>
     <ul class="desc-checklist">
-      <li>Aprire il <strong>Conto Corrente Arancio Più</strong> inserendo il mio codice amico <span class="code-inline">AN386A</span> e richiedere la <strong>Carta di Debito Mastercard</strong> entro il <strong>23/05</strong></li>
-      <li>Spendere <strong>100€</strong> con la carta di debito entro il <strong>31/07</strong></li>
+      <li>Aprire il Conto Corrente Arancio Più inserendo il mio codice amico AN386A e richiedere la Carta di Debito Mastercard entro il 23/05</li>
+      <li>Spendere 100€ con la carta di debito entro il 31/07</li>
     </ul>
 
     <div class="code-card">
@@ -452,6 +511,31 @@
 
 <div class="section-divider"></div>
 
+<!-- PROMO 4% -->
+<section class="content-section">
+  <div class="section-eyebrow">
+    <div class="eyebrow-line"></div>
+    <span>Promozione in corso</span>
+  </div>
+  <div class="promo-card">
+    <div class="promo-card-top">
+      <div class="promo-rate">4<span>%</span></div>
+      <div class="promo-rate-desc">
+        <div class="promo-rate-title">lordo per 12 mesi</div>
+        <div class="promo-rate-sub">su Conto Arancio fino a 100.000€</div>
+      </div>
+    </div>
+    <p class="promo-headline">Dai spazio ai tuoi desideri!</p>
+    <ul class="promo-list">
+      <li>Apri Conto Corrente Arancio e Conto Arancio entro il <strong style="white-space:nowrap">18/04</strong></li>
+      <li>Accredita lo stipendio o almeno <strong style="white-space:nowrap">1.000€ al mese</strong></li>
+    </ul>
+    <div class="promo-note">Offerta valida per i nuovi clienti ING. Condizioni sul sito ufficiale ING.</div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
 <!-- COME FUNZIONA -->
 <section class="content-section">
   <div class="section-eyebrow">
@@ -463,14 +547,14 @@
       <div class="step-num">01</div>
       <div class="step-body">
         <strong>Clicca il link e apri il Conto Arancio Più</strong>
-        <p>Usa il link o il codice <span class="code-inline">AN386A</span> su <a href="https://www.ing.it/per-i-miei-amici.html?code=AN386A" target="_blank" style="color:var(--orange)">ing.it</a> entro il <strong>23/05/2026</strong> — richiedi anche la <strong>Carta di Debito Mastercard</strong></p>
+        <p>Usa il link o il codice <span class="code-inline">AN386A</span> su <a href="https://www.ing.it/per-i-miei-amici.html?code=AN386A" target="_blank" style="color:var(--orange)">ing.it</a> entro il <strong>23/05/2026</strong> — richiedi anche la <strong style="white-space:nowrap">Carta di Debito Mastercard</strong></p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">02</div>
       <div class="step-body">
         <strong>Spendi 100€ con la carta</strong>
-        <p>Usa la tua Carta di Debito Mastercard per acquisti online o in negozio per almeno <strong>100€</strong> entro il <strong>31/07/2026</strong> — anche in più transazioni</p>
+        <p>Usa la tua Carta di Debito Mastercard per acquisti online o in negozio per almeno <strong style="white-space:nowrap">100€ entro il 31/07/2026</strong> — anche in più transazioni</p>
       </div>
     </div>
     <div class="step">
@@ -546,14 +630,14 @@
       <div class="step-num">?</div>
       <div class="step-body">
         <strong>Il codice amico ING AN386A è ancora valido?</strong>
-        <p>Sì, il codice <span class="code-inline">AN386A</span> è attivo fino al <strong>23/05/2026</strong>, data entro cui bisogna aprire il conto.</p>
+        <p>Sì, il codice <span class="code-inline">AN386A</span> è attivo fino al <strong style="white-space:nowrap">23/05/2026</strong>, data entro cui bisogna aprire il conto.</p>
       </div>
     </div>
     <div class="step">
       <div class="step-num">?</div>
       <div class="step-body">
         <strong>Quanto vale il bonus codice amico ING?</strong>
-        <p>Con il codice <span class="code-inline">AN386A</span> ricevi <strong>50€</strong> sul conto, e anche chi ti ha invitato riceve 50€. Win-win.</p>
+        <p>Con il codice <span class="code-inline">AN386A</span> ricevi <strong style="white-space:nowrap">50€</strong> sul conto, e anche chi ti ha invitato riceve 50€. Win-win.</p>
       </div>
     </div>
   </div>
